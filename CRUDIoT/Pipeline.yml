@@ -6,15 +6,20 @@ trigger:
 
       - main
 
+
+
 pool:
 
   vmImage: 'ubuntu-latest'
+
+
 
 steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
     version: '6.0.x'
+
   
 
 - task: DotNetCoreCLI@2
@@ -25,6 +30,8 @@ steps:
 
     projects: '**/*.csproj'
 
+
+
 - task: DotNetCoreCLI@2
 
   inputs:
@@ -34,6 +41,8 @@ steps:
     arguments: '--configuration $(BuildConfiguration)'
 
   displayName: 'dotnet build $(BuildConfiguration)'
+
+
 
 - task: DotNetCoreCLI@2
 
@@ -47,10 +56,12 @@ steps:
 
     zipAfterPublish: True
 
+
+
 - task: PublishPipelineArtifact@1
 
   inputs:
 
     targetPath: '$(Build.ArtifactStagingDirectory)' 
 
-    artifactName: 'Rajiartifact'
+    artifactName: 'rajiartifactsnew'
