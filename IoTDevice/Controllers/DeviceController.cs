@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 
 
-namespace CRUDIoT.Controllers
+namespace IOTDEVICE.Controllers
 {
 [ApiController]
 [Route("[controller]")]
