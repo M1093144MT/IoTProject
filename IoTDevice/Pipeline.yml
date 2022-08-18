@@ -40,7 +40,7 @@ steps:
 
     arguments: '--configuration $(BuildConfiguration)'
 
-    displayName: 'dotnet build $(BuildConfiguration)'
+ 
 
 
 
