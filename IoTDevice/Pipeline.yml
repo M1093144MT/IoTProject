@@ -51,7 +51,9 @@ steps:
     command: publish
 
     publishWebProjects: True
-
+    
+    projects: IoTDevice/IoTDevice.csproj
+    
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
     zipAfterPublish: True
